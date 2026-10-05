@@ -1,0 +1,100 @@
+name: Daily user-agent update and release
+
+# Once a day regenerate the User-Agent list (the part of the codebase that the
+# upstream author also updates automatically) and, if it changed, publish a new
+# extension release.
+#
+# There is deliberately no `push` trigger: the commits this workflow creates
+# must not start another run. As a second line of defence every commit it makes
+# carries the `[uasw-release]` marker, which the job `if` below skips. Pushes
+# made with the default `GITHUB_TOKEN` do not trigger workflows anyway.
+
+on:
+  schedule:
+    # Every day at 04:17 UTC (off-peak, to avoid the top-of-the-hour rush).
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-release
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[uasw-release]') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          python -m pip install --upgrade pip SPARQLWrapper
+
+      - name: Update User-Agent list
+        run: python scripts/user-agent-update.py
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git diff --quiet -- assets/user-agents.txt; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Bump version and commit
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          version="$(node scripts/bump-version.mjs)"
+          echo "version=${version}" >> "$GITHUB_ENV"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/user-agents.txt manifest.json
+          git commit -m "Daily User-Agent list update and release v${version} [uasw-release]"
+
+      - name: Build extension
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Run smoke test
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          npm run browser:install
+          browser="$(find chrome -type f -path '*/chrome-linux64/chrome' | head -n 1)"
+          if [ -z "$browser" ]; then
+            echo "Chrome for Testing executable not found" >&2
+            exit 1
+          fi
+          echo "UASW_CHROME=${browser}" >> "$GITHUB_ENV"
+          npm test
+
+      - name: Push and publish release
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git push origin HEAD:main
+          gh release create "v${version}" \
+            "dist/user-agent-switcher-chrome-${version}.zip" \
+            --title "v${version}" \
+            --notes ""

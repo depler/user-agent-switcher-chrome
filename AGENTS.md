@@ -385,6 +385,27 @@ npm install
   declared under `placeholders` (otherwise Chrome refuses to load the extension —
   this is exactly how `$HOSTNAME$` broke it).
 
+### 5.6 CI (GitHub Actions)
+
+`.github/workflows/daily-release.yml` runs once a day (plus manual
+`workflow_dispatch`). It regenerates the User-Agent list the same way the
+upstream author does — `scripts/user-agent-update.py` against Wikidata — and,
+**only if `assets/user-agents.txt` changed**:
+
+1. bumps the last component of `version` in `manifest.json`
+   (`scripts/bump-version.mjs`, `1.4.0` → `1.4.1`);
+2. commits the list **and** the version as one commit whose message ends with
+   the marker `[uasw-release]`;
+3. builds (`npm run build`) and runs the smoke test on Chrome for Testing;
+4. pushes to `main` and creates a GitHub Release `v<version>` with only the
+   built `dist/user-agent-switcher-chrome-<version>.zip` attached (no notes).
+
+There is **no `push` trigger**, and the job additionally skips commits carrying
+the `[uasw-release]` marker, so the version-bump commit cannot start another
+build. Failed builds are not retried. The version bump is what makes existing
+installs pick up the new list (`loadOptions()` re-reads the default list only
+when `default-list-version !== version`, see §8).
+
 ---
 
 ## 6. Testing
@@ -466,7 +487,9 @@ scripts/
   test.mjs                        CDP smoke test (npm test)
   build.mjs                       ZIP packaging (npm run build)
   build-icons.mjs                 SVG → PNG (npm run icons)
+  bump-version.mjs                version bump for the daily release workflow
   user-agent-update.py            UA list updater (from the original)
+.github/workflows/daily-release.yml  daily UA update + release (see §5.6)
 jsconfig.json .eslintrc.json .editorconfig
 package.json package-lock.json    dev tooling
 .vscode/tasks.json                tasks: typecheck/lint/test/build/icons
