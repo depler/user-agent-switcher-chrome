@@ -385,33 +385,66 @@ npm install
   declared under `placeholders` (otherwise Chrome refuses to load the extension —
   this is exactly how `$HOSTNAME$` broke it).
 
-### 5.6 CI (GitHub Actions)
+### 5.6 Release cycle (GitHub Actions)
 
-`.github/workflows/build-release.yml` runs once a day (plus manual
-`workflow_dispatch`, whose `force` checkbox skips the "did the list change?"
-check and runs the whole build/release pipeline anyway). It regenerates the
-User-Agent list the same way the upstream author does — `scripts/user-agent-update.py`
-against Wikidata — and, **only if `assets/user-agents.txt` changed** (or `force`
-is set):
+The whole automated release cycle lives in `.github/workflows/build-release.yml`
+(workflow **Build and release**, job **Build**). It is the GitHub Actions
+replacement for the upstream shell chain (`update.sh` / `auto-update.sh` /
+`release.sh` / `publish.sh`).
 
-1. bumps the last component of `version` in `manifest.json`
-   (`scripts/bump-version.mjs`, `1.4.0` → `1.4.1`);
-2. commits the list **and** the version as one commit whose message ends with
-   the marker `[uasw-release]`;
-3. builds (`npm run build`) and runs the smoke test on Chrome for Testing;
-4. pushes to `main` and creates a GitHub Release `v<version>` with only the
-   built `dist/user-agent-switcher-chrome-<version>.zip` attached (no notes).
+**Triggers**
 
-The Wikidata queries run anonymously unless the repository secret
-`WIKIDATA_API_TOKEN` is set. When present, the workflow writes a temporary
-`wikidata-api-secret.txt` (removed on exit; gitignored and excluded from the
-build) so the updater authenticates and gets a higher rate limit.
+- `schedule` — once a day at 04:17 UTC;
+- `workflow_dispatch` — manual, with a **force** checkbox (below).
 
-There is **no `push` trigger**, and the job additionally skips commits carrying
-the `[uasw-release]` marker, so the version-bump commit cannot start another
-build. Failed builds are not retried. The version bump is what makes existing
-installs pick up the new list (`loadOptions()` re-reads the default list only
-when `default-list-version !== version`, see §8).
+There is deliberately **no `push` trigger**: the commits this workflow creates
+must not start another run.
+
+**Steps** (one job; steps 1–2 always run, the rest only when there is a change
+or `force` is set)
+
+1. **Update the list.** `python scripts/user-agent-update.py` regenerates
+   `assets/user-agents.txt` from Wikidata, exactly like the upstream author's
+   automation. If the repository secret `WIKIDATA_API_TOKEN` is set, the workflow
+   first writes a temporary `wikidata-api-secret.txt` (gitignored, excluded from
+   the build, removed on exit) so the updater sends `Authorization: Bearer …` and
+   gets a higher rate limit; otherwise the queries run anonymously.
+2. **Detect changes.** `git diff --quiet -- assets/user-agents.txt`. A manual run
+   with **force** ticked skips this check and proceeds regardless.
+3. **Bump version and commit.** `scripts/bump-version.mjs` increments the last
+   component of `version` in `manifest.json` (`1.4.0` → `1.4.1`). The list and the
+   version go into **one** commit whose message ends with the `[uasw-release]`
+   marker.
+4. **Build.** `npm run build` → `dist/user-agent-switcher-chrome-<version>.zip`
+   (the version bump happens *before* the build, so the artifact carries the new
+   version).
+5. **Test.** `npm run browser:install` fetches Chrome for Testing, then `npm test`
+   runs the CDP smoke test against it (the browser binary is passed via
+   `UASW_CHROME`).
+6. **Push and release.** `git push origin HEAD:main`, then
+   `gh release create v<version>` with only the built ZIP attached — no release
+   notes, no source archives uploaded by us.
+
+**Guards against a cyclic build.** Three independent ones: the trigger is
+`schedule`/`workflow_dispatch` only; pushes made with the default `GITHUB_TOKEN`
+do not trigger workflows; and the job-level `if` skips commits whose message
+carries the `[uasw-release]` marker.
+
+**Failed builds are not retried.** If a step fails the local commit is discarded
+and nothing is pushed, so the next run that finds no list change simply stops.
+`force` exists only to exercise the full pipeline (it creates a new release each
+time).
+
+**Why the version bump matters.** `loadOptions()` re-reads the default list from
+`assets/user-agents.txt` only when `default-list-version !== manifest.version`
+(see §8), so without a bump a regenerated list would never reach existing
+installs.
+
+**CI parity with local dev.** Like `npm test` locally, the job needs initialised
+submodules (`build.mjs` and the runtime read `deps/public-suffix-list/dist/psl.js`
+and `deps/wext-options/options.js`) and Chrome for Testing (branded builds block
+`--load-extension`, see §6). `chrome/`, `dist/` and the secret files never enter
+git, the ZIP or lint.
 
 ---
 
