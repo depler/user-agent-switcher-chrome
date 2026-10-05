@@ -28,7 +28,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     timeout-minutes: 30
     if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[uasw-release]') }}
