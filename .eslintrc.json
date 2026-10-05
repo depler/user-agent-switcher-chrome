@@ -1,0 +1,50 @@
+{
+	"env": {
+		"browser": true,
+		"es2022": true,
+		"worker": true,
+		"webextensions": true
+	},
+	"parserOptions": {
+		"sourceType": "script",
+		"ecmaVersion": 2022
+	},
+	"extends": "eslint:recommended",
+	"globals": {
+		"chrome":        "readonly",
+		"importScripts": "readonly"
+	},
+	"rules": {
+		"indent": [
+			"error",
+			"tab",
+			{"SwitchCase": 1, "outerIIFEBody": 0}
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes":       ["error", "double"],
+		"semi":         ["error", "always"],
+		"comma-dangle": ["error", "only-multiline"],
+		"curly":        ["error"],
+
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+
+		"no-unused-vars": ["error", {
+			"varsIgnorePattern": "^_",
+			"argsIgnorePattern": "^_"
+		}],
+
+		"no-console": ["error", {"allow": ["info", "warn", "error", "exception", "group", "groupCollapsed", "groupEnd", "table"]}],
+
+		/* The shared code calls `obj.hasOwnProperty(...)`; it is safe here and
+		   was already accepted by the upstream project's lint setup. */
+		"no-prototype-builtins": "off"
+	},
+	"ignorePatterns": [
+		"deps/",
+		"dist/",
+		"node_modules/"
+	]
+}

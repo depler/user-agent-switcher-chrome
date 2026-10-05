@@ -1,0 +1,27 @@
+[submodule "deps/browscap/browscap-js"]
+	path = deps/browscap/browscap-js
+	url = https://github.com/ntninja/browscap-js.git
+[submodule "deps/browscap/md5"]
+	path = deps/browscap/md5
+	url = https://github.com/pvorb/node-md5.git
+[submodule "deps/browscap/charenc"]
+	path = deps/browscap/charenc
+	url = https://github.com/pvorb/node-charenc.git
+[submodule "deps/browscap/crypt"]
+	path = deps/browscap/crypt
+	url = https://github.com/pvorb/node-crypt.git
+[submodule "deps/browscap/is-buffer"]
+	path = deps/browscap/is-buffer
+	url = https://github.com/feross/is-buffer.git
+[submodule "deps/browscap/synchronous-promise"]
+	path = deps/browscap/synchronous-promise
+	url = https://github.com/fluffynuts/synchronous-promise.git
+[submodule "deps/public-suffix-list"]
+	path = deps/public-suffix-list
+	url = https://github.com/wrangr/psl.git
+[submodule "deps/wext-options"]
+	path = deps/wext-options
+	url = https://gitlab.com/ntninja/wext-options.git
+[submodule "deps/webextension-polyfill"]
+	path = deps/webextension-polyfill
+	url = https://github.com/mozilla/webextension-polyfill.git

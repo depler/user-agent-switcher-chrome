@@ -1,0 +1,116 @@
+{
+	"option_badge_text": {
+		"message": "Dangos Defnyddiwr-Asiant fel testun bathodyn ar yr eicon?",
+		"description": "Text of checkbox option to show/hide the two to four letter abbreviations displayed ontop of the browser action icon"
+	},
+	"extension_description": {
+		"message": "Diystyru llinyn Defnyddiwr-Asiant y porwr yn hawdd",
+		"description": "Extension description"
+	},
+	"option_popup_override_size": {
+		"message": "Gorfodi maint pop-up/dewislen diofyn",
+		"description": "Text of checkbox option to force the extension popup to a static/larger size than it would normally be according to the browser defaults (note that this also has a description attached)"
+	},
+	"option_popup_override_size_description": {
+		"message": "Galluogwch os bydd y 'popup' yn arddangos yn rhy fach ar eich ddyfais"
+	},
+	"option_random_jitter": {
+		"message": "Amrywiad modd ar hap"
+	},
+	"options_entries_reset": {
+		"message": "Ailosod i werthoeadd gwreiddiol"
+	},
+	"options_entries_caption": {
+		"message": "Cofnodion Defnyddiwr-Asiant"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "Gwerthoedd gwreiddiol wedi'u hadfer"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "Dadwneud ailosod"
+	},
+	"options_entries_switch_text": {
+		"message": "Newid i Modd Testun"
+	},
+	"options_entries_heading_enabled": {
+		"message": "Wedi'i alluogi"
+	},
+	"options_entries_heading_label": {
+		"message": "Label"
+	},
+	"options_entries_switch_table": {
+		"message": "Newid i Modd Bwrdd"
+	},
+	"options_entries_heading_category": {
+		"message": "Categori"
+	},
+	"useragent_category_desktop": {
+		"message": "Penbwrdd"
+	},
+	"useragent_category_mobile": {
+		"message": "Symudol"
+	},
+	"useragent_category_bot": {
+		"message": "Bot"
+	},
+	"options_entries_heading_string": {
+		"message": "Testun"
+	},
+	"icon_title_random": {
+		"message": "Modd ar hap"
+	},
+	"icon_title_enabled": {
+		"message": "Wedi'i alluogi"
+	},
+	"useragent_category_other": {
+		"message": "Eraill"
+	},
+	"icon_title_override_enabled": {
+		"message": "Wedi'i alluogi gan Ymyriad"
+	},
+	"icon_title_disabled": {
+		"message": "Wedi'i analluogi"
+	},
+	"icon_title_override_disabled": {
+		"message": "Wedi'i analluogi gan Ymyriad"
+	},
+	"popup_item_options": {
+		"message": "Hoffterau…"
+	},
+	"popup_item_override_tpl": {
+		"message": "“$HOSTNAME$”",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"popup_item_random": {
+		"message": "Galluogwch modd ar hap"
+	},
+	"popup_item_override": {
+		"message": "Ymyrraeth ar gyfer Parth"
+	},
+	"popup_item_random_categories": {
+		"message": "Categorïau:"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "Dim ond ar cychwyn"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "Pob:"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "Awr"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "Diwrnod(au)"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "Munud(au)"
+	},
+	"popup_item_default": {
+		"message": "Gwreiddiol"
+	}
+}

@@ -1,0 +1,129 @@
+{
+    "extension_description": {
+        "message": "На једноставан начин премостите опис корисничког агента"
+    },
+    "options_entries_caption": {
+        "message": "Описи корисничких агената"
+    },
+    "options_entries_reset": {
+        "message": "Врати на подразумеване вредности"
+    },
+    "options_entries_reset_undo_text": {
+        "message": "Подразумеване вредности враћене"
+    },
+    "options_entries_reset_undo_button": {
+        "message": "Опозови враћање"
+    },
+    "options_entries_switch_text": {
+        "message": "Пребаци се на текстуални режим"
+    },
+    "options_entries_switch_table": {
+        "message": "Пребаци се на режим табеле"
+    },
+    "options_entries_heading_label": {
+        "message": "Етикета"
+    },
+    "options_entries_heading_string": {
+        "message": "Реченица"
+    },
+    "icon_title_enabled": {
+        "message": "Омогућено"
+    },
+    "icon_title_disabled": {
+        "message": "Онемогућено"
+    },
+    "popup_item_options": {
+        "message": "Поставке…"
+    },
+    "popup_item_default": {
+        "message": "Подразумевано"
+    },
+    "option_badge_text": {
+        "message": "Приказати корисничког агента у облику текстуалног беџа на иконици?",
+        "description": "Text of checkbox option to show/hide the two to four letter abbreviations displayed ontop of the browser action icon"
+    },
+    "option_random_jitter": {
+        "message": "Варијација насумичног режима",
+        "description": "Text of numeric option (0-100) for setting by how many per-cent the random-interval value should (on avarage) be varied"
+    },
+    "options_entries_heading_category": {
+        "message": "Категорија",
+        "description": "Options page table editor heading for the column with general category of the given User-Agent-String"
+    },
+    "useragent_category_desktop": {
+        "message": "Стони уређаји",
+        "description": "Default category label for browsers on desktop devices"
+    },
+    "useragent_category_mobile": {
+        "message": "Мобилни уређаји",
+        "description": "Default category label for browsers on mobile devices"
+    },
+    "useragent_category_bot": {
+        "message": "Ботови",
+        "description": "Default category label for search engine bots"
+    },
+    "useragent_category_other": {
+        "message": "Друго",
+        "description": "Default category label for unclassified client software"
+    },
+    "icon_title_random": {
+        "message": "Насумични режим",
+        "description": "Text displayed in the browser action icon tooltip when the User-Agent header is choosen at random"
+    },
+    "popup_item_random": {
+        "message": "Омогући насумични режим",
+        "description": "The label of the menu item for enabling time-based User-Agent randomization"
+    },
+    "popup_item_random_categories": {
+        "message": "Категорије:",
+        "description": "The section header of the categories selection of random selection mode"
+    },
+    "popup_item_random_interval_mode_restart": {
+        "message": "Само при покретању",
+        "description": "The label of the menu item for enabling the time-based User-Agent randomization only on extension and browser startup"
+    },
+    "popup_item_random_interval_mode_timed": {
+        "message": "На сваких:",
+        "description": "The label of the menu item for enabling the time-based User-Agent randomization at regular intervals"
+    },
+    "popup_item_random_interval_unit_minutes": {
+        "message": "Минут(а)",
+        "description": "A User-Agent randomization time interval"
+    },
+    "popup_item_random_interval_unit_hours": {
+        "message": "Сат(и)",
+        "description": "A User-Agent randomization time interval"
+    },
+    "popup_item_random_interval_unit_days": {
+        "message": "Дан(а)",
+        "description": "A User-Agent randomization time interval"
+    },
+    "options_entries_heading_enabled": {
+        "message": "Омогућено",
+        "description": "Options page table editor heading for the column allowing to enabled or disable items"
+    },
+    "popup_item_override_tpl": {
+        "message": "",
+        "placeholders": {
+            "hostname": {
+                "content": "$1",
+                "example": "https://www.example.net"
+            }
+        }
+    },
+    "icon_title_override_enabled": {
+        "message": ""
+    },
+    "icon_title_override_disabled": {
+        "message": ""
+    },
+    "option_popup_override_size": {
+        "message": ""
+    },
+    "popup_item_override": {
+        "message": ""
+    },
+    "option_popup_override_size_description": {
+        "message": ""
+    }
+}

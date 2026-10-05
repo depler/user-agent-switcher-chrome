@@ -1,0 +1,121 @@
+{
+	"extension_description": {
+		"message": "Spielend den User-Agent-Text des Browsers ändern"
+	},
+	"option_badge_text": {
+		"message": "User-Agent als Icon-Aufschrift anzeigen?"
+	},
+	"option_popup_override_size": {
+		"message": "Standardgröße für Popup/Menü erzwingen"
+	},
+	"option_popup_override_size_description": {
+		"message": "Verwenden Sie dies, wenn das Popup auf Ihrem Gerät zu klein dargestellt wird"
+	},
+	"option_random_jitter": {
+		"message": "Varianz für Zufallsmodus"
+	},
+	"options_entries_caption": {
+		"message": "User-Agent Einträge"
+	},
+	"options_entries_reset": {
+		"message": "Auf Standardwerte zurücksetzten"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "Standardwerte wiederhergestellt"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "Zurücksetzten widerrufen"
+	},
+	"options_entries_switch_text": {
+		"message": "In den Text-Modus wechseln"
+	},
+	"options_entries_switch_table": {
+		"message": "In den Tabellen-Modus wechseln"
+	},
+	"options_entries_heading_enabled": {
+		"message": "Aktiviert"
+	},
+	"options_entries_heading_label": {
+		"message": "Name"
+	},
+	"options_entries_heading_category": {
+		"message": "Kategorie"
+	},
+	"options_entries_heading_string": {
+		"message": "Wert"
+	},
+	"useragent_category_desktop": {
+		"message": "Desktop"
+	},
+	"useragent_category_mobile": {
+		"message": "Mobilgerät"
+	},
+	"useragent_category_bot": {
+		"message": "Bot"
+	},
+	"useragent_category_other": {
+		"message": "Sonstige"
+	},
+	"icon_title_enabled": {
+		"message": "Aktiviert"
+	},
+	"icon_title_disabled": {
+		"message": "Deaktiviert"
+	},
+	"icon_title_override_enabled": {
+		"message": "Aktiviert (Überschrieben)"
+	},
+	"icon_title_override_disabled": {
+		"message": "Deaktiviert (Überschrieben)"
+	},
+	"popup_item_options": {
+		"message": "Einstellungen…"
+	},
+	"popup_item_default": {
+		"message": "Unverändert"
+	},
+	"popup_item_override": {
+		"message": "Für Domain überschreiben"
+	},
+	"popup_item_override_tpl": {
+		"message": "„$HOSTNAME$“",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"icon_title_random": {
+		"message": "Zufallsmodus",
+		"description": "Text displayed in the browser action icon tooltip when the User-Agent header is choosen at random"
+	},
+	"popup_item_random": {
+		"message": "Zufallsmodus aktivieren",
+		"description": "The label of the menu item for enabling time-based User-Agent randomization"
+	},
+	"popup_item_random_categories": {
+		"message": "Kategorien:",
+		"description": "The section header of the categories selection of random selection mode"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "Nur beim Starten",
+		"description": "The label of the menu item for enabling the time-based User-Agent randomization only on extension and browser startup"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "Alle:",
+		"description": "The label of the menu item for enabling the time-based User-Agent randomization at regular intervals"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "Minute(n)",
+		"description": "A User-Agent randomization time interval"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "Stunde(n)",
+		"description": "A User-Agent randomization time interval"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "Tag(e)",
+		"description": "A User-Agent randomization time interval"
+	}
+}

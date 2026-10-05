@@ -1,0 +1,135 @@
+{
+	"useragent_category_mobile": {
+		"message": "موبائیل",
+		"description": "Default category label for browsers on mobile devices"
+	},
+	"options_entries_heading_enabled": {
+		"message": "چالو کیتا",
+		"description": "Options page table editor heading for the column allowing to enabled or disable items"
+	},
+	"options_entries_heading_category": {
+		"message": "گٹھ",
+		"description": "Options page table editor heading for the column with general category of the given User-Agent-String"
+	},
+	"options_entries_caption": {
+		"message": "ورتن ایجنٹ اندرن",
+		"description": "Header text of the entries editor in the extension options"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "ریسیٹ کرن موڑو",
+		"description": "Label of button for undoing a reset (displayed below the text that asserts that the options have just been reset)"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "مول مُل فیر پاۓ گئے اے",
+		"description": "Text of popup that is shown after the reset link has been clicked"
+	},
+	"options_entries_heading_label": {
+		"message": "چیپی",
+		"description": "Options page table editor heading for the column with user-facing User-Agent-String labels"
+	},
+	"options_entries_heading_string": {
+		"message": "لکھت",
+		"description": "Options page table editor heading for the column with the actual server-reported User-Agent-Strings"
+	},
+	"icon_title_random": {
+		"message": "رلؕواں ورتو",
+		"description": "Text displayed in the browser action icon tooltip when the User-Agent header is choosen at random"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "منٹ",
+		"description": "A User-Agent randomization time interval"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "گٹھے",
+		"description": "A User-Agent randomization time interval"
+	},
+	"popup_item_default": {
+		"message": "مول",
+		"description": "The label of the menu item that disables the User-Agent overrider and lets the browser send its default User-Agent string"
+	},
+	"useragent_category_desktop": {
+		"message": "ڈیسکٹوپ",
+		"description": "Default category label for browsers on desktop devices"
+	},
+	"useragent_category_bot": {
+		"message": "بوٹ",
+		"description": "Default category label for search engine bots"
+	},
+	"popup_item_override_tpl": {
+		"message": "“$HOSTNAME$”",
+		"description": "Label of an individual selectable override domain",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"useragent_category_other": {
+		"message": "ہور",
+		"description": "Default category label for unclassified client software"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "ہر:",
+		"description": "The label of the menu item for enabling the time-based User-Agent randomization at regular intervals"
+	},
+	"icon_title_enabled": {
+		"message": "چالو کیتا",
+		"description": "Text displayed in the browser action icon tooltip when request processing is being done because of the global setting"
+	},
+	"icon_title_disabled": {
+		"message": "بند جیتا",
+		"description": "Text displayed in the browser action icon tooltip when no request processing is being done because of the global setting"
+	},
+	"popup_item_options": {
+		"message": "سیٹنگاں۔ ۔ ۔",
+		"description": "The label of the menu item for opening the extension's preference page"
+	},
+	"popup_item_random_categories": {
+		"message": "گٹھاں:",
+		"description": "The section header of the categories selection of random selection mode"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "دن",
+		"description": "A User-Agent randomization time interval"
+	},
+	"options_entries_reset": {
+		"message": ""
+	},
+	"extension_description": {
+		"message": ""
+	},
+	"options_entries_switch_text": {
+		"message": ""
+	},
+	"option_random_jitter": {
+		"message": ""
+	},
+	"icon_title_override_enabled": {
+		"message": ""
+	},
+	"icon_title_override_disabled": {
+		"message": ""
+	},
+	"option_popup_override_size": {
+		"message": ""
+	},
+	"popup_item_random": {
+		"message": ""
+	},
+	"popup_item_override": {
+		"message": ""
+	},
+	"option_badge_text": {
+		"message": ""
+	},
+	"option_popup_override_size_description": {
+		"message": ""
+	},
+	"options_entries_switch_table": {
+		"message": ""
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": ""
+	}
+}

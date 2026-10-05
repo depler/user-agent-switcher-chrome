@@ -1,0 +1,113 @@
+{
+	"options_entries_heading_category": {
+		"message": "Kategooria"
+	},
+	"popup_item_random": {
+		"message": "Kasuta juhuslikku režiimi"
+	},
+	"popup_item_random_categories": {
+		"message": "Kategooriad:"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "Vaid käivitamisel"
+	},
+	"extension_description": {
+		"message": "Muuda brauseri tunnust vastavalt oma eelistustele"
+	},
+	"option_popup_override_size": {
+		"message": "Kasuta hüpikakna või menüü vaikimisi suurust"
+	},
+	"option_badge_text": {
+		"message": "Kas näutame brauseri tunnust ikooni tekstina?"
+	},
+	"option_popup_override_size_description": {
+		"message": "Lülita sisse siis, kui hüpikaken on sinu arvutis või seadmes liiga väike"
+	},
+	"options_entries_caption": {
+		"message": "Brauseri tunnuste kirjed"
+	},
+	"options_entries_reset": {
+		"message": "Nulli muudatused ja kasuta vaikimisi väärtusi"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "Vaikimisi väärtused on taastatud"
+	},
+	"option_random_jitter": {
+		"message": "Varieeruvus juhuslikus režiimis"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "Pööra nullimine tagasi"
+	},
+	"options_entries_switch_table": {
+		"message": "Kasuta tabelivaadet"
+	},
+	"options_entries_switch_text": {
+		"message": "Kasuta tekstivaadet"
+	},
+	"options_entries_heading_enabled": {
+		"message": "Kasutusel"
+	},
+	"options_entries_heading_label": {
+		"message": "Silt"
+	},
+	"options_entries_heading_string": {
+		"message": "Sõne"
+	},
+	"useragent_category_mobile": {
+		"message": "Nutiseade"
+	},
+	"useragent_category_desktop": {
+		"message": "Töölaud"
+	},
+	"useragent_category_bot": {
+		"message": "Veebirobot"
+	},
+	"useragent_category_other": {
+		"message": "Muu"
+	},
+	"icon_title_random": {
+		"message": "Juhuslik režiim"
+	},
+	"icon_title_enabled": {
+		"message": "Kasutusel"
+	},
+	"icon_title_disabled": {
+		"message": "Pole kasutusel"
+	},
+	"icon_title_override_enabled": {
+		"message": "Muudetud domeenikohase kasutusreegli alusel"
+	},
+	"popup_item_options": {
+		"message": "Eelistused…"
+	},
+	"popup_item_override": {
+		"message": "Kasuta selles domeenis"
+	},
+	"popup_item_override_tpl": {
+		"message": "“$HOSTNAME$”",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"icon_title_override_disabled": {
+		"message": "Domeenikohase kasutusreegli alusel muutmata"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "Iga:"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "minuti järel"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "tunni järel"
+	},
+	"popup_item_default": {
+		"message": "Vaikimisi"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "päeva järel"
+	}
+}

@@ -1,0 +1,152 @@
+/*
+ * User Agent Switcher (Chrome port)
+ *
+ * Minimal re-implementation of the subset of Firefox's `browser_style`
+ * stylesheet that the popup and options pages rely on. Chrome dropped
+ * support for `browser_style`, so without this the UI would render
+ * completely unstyled.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+:root {
+	color-scheme: light dark;
+
+	--uasw-text:         #15141a;
+	--uasw-background:   #ffffff;
+	--uasw-border:       rgba(21, 20, 26, 0.15);
+	--uasw-hover:        rgba(21, 20, 26, 0.08);
+	--uasw-active:       rgba(21, 20, 26, 0.16);
+	--uasw-accent:       #0060df;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--uasw-text:       #fbfbfe;
+		--uasw-background: #2b2a33;
+		--uasw-border:     rgba(251, 251, 254, 0.15);
+		--uasw-hover:      rgba(251, 251, 254, 0.08);
+		--uasw-active:     rgba(251, 251, 254, 0.16);
+		--uasw-accent:     #0df;
+	}
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+	font-size: 13px;
+	line-height: 1.45;
+
+	color:            var(--uasw-text);
+	background-color: var(--uasw-background);
+}
+
+/* Firefox's browser_style is based on the platform message-box font; the
+   closest Chrome equivalent is the system UI font already applied above. */
+
+/**************/
+/* Sections   */
+/**************/
+
+.panel-section {
+	display: block;
+	box-sizing: border-box;
+}
+
+.panel-section-list {
+	padding: 4px 0;
+}
+
+.panel-section-header {
+	padding: 4px 12px;
+}
+
+.panel-section-header.subsection {
+	margin-bottom: 2px;
+}
+
+.text-section-header {
+	font-weight: 600;
+}
+
+.panel-section-separator {
+	border: 0;
+	border-top: 1px solid var(--uasw-border);
+	margin: 4px 0;
+}
+
+/****************/
+/* List entries */
+/****************/
+
+.panel-list-item {
+	display:     flex;
+	align-items: center;
+	gap:         6px;
+
+	min-height: auto;
+	padding:    4px 12px;
+
+	width: 100%;
+	box-sizing: border-box;
+
+	cursor: default;
+	white-space: nowrap;
+
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	text-align: start;
+}
+
+.panel-list-item:hover {
+	background-color: var(--uasw-hover);
+}
+
+.panel-list-item:active {
+	background-color: var(--uasw-active);
+}
+
+.panel-list-item > .text,
+.panel-list-item > label {
+	flex: 1 1 auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+label {
+	cursor: default;
+}
+
+/***********/
+/* Widgets */
+/***********/
+
+input[type="checkbox"],
+input[type="radio"] {
+	flex: 0 0 auto;
+	margin: 0;
+	accent-color: var(--uasw-accent);
+}
+
+input[type="number"] {
+	max-width: 6em;
+}
+
+select,
+input[type="number"],
+input[type="text"] {
+	color:            var(--uasw-text);
+	background-color: var(--uasw-background);
+	border: 1px solid var(--uasw-border);
+	border-radius: 3px;
+	padding: 2px 4px;
+}
+
+/* The inline styles of the popup already provide the dropdown arrow and the
+   collapsible animation for the category headers. */

@@ -1,0 +1,13 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"cSpell.words": [
+		"ENGTEXT",
+		"Grayscale",
+		"matchingengine",
+		"millis",
+		"uaparser",
+		"browscap",
+		"declarativeNetRequest",
+		"uasw"
+	]
+}

@@ -1,0 +1,113 @@
+{
+	"extension_description": {
+		"message": "உலாவியின் பயனர்-முகவர் சரத்தை எளிதாக மேலெழுதவும்"
+	},
+	"useragent_category_desktop": {
+		"message": "டெச்க்டாப்"
+	},
+	"icon_title_override_enabled": {
+		"message": "மேலெழுதலால் இயக்கப்பட்டது"
+	},
+	"popup_item_options": {
+		"message": "விருப்பத்தேர்வுகள்…"
+	},
+	"option_badge_text": {
+		"message": "ஐகானில் பயனர்-முகவர் ஒட்டு உரையாக காட்டவா?"
+	},
+	"option_popup_override_size": {
+		"message": "இயல்புநிலை பாப்அப்/மெனு அளவை கட்டாயப்படுத்துங்கள்"
+	},
+	"option_popup_override_size_description": {
+		"message": "உங்கள் சாதனத்தில் பாப்அப் மிகவும் சிறியதாக வழங்கப்பட்டால் இயக்கவும்"
+	},
+	"option_random_jitter": {
+		"message": "சீரற்ற பயன்முறை மாறுபாடு"
+	},
+	"options_entries_caption": {
+		"message": "பயனர்-முகவர் உள்ளீடுகள்"
+	},
+	"options_entries_reset": {
+		"message": "இயல்புநிலை மதிப்புகளுக்கு மீட்டமைக்கவும்"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "இயல்புநிலை மதிப்புகள் மீட்டமைக்கப்பட்டன"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "மீட்டமைக்கவும்"
+	},
+	"options_entries_switch_text": {
+		"message": "உரை பயன்முறைக்கு மாறவும்"
+	},
+	"options_entries_switch_table": {
+		"message": "அட்டவணை பயன்முறைக்கு மாறவும்"
+	},
+	"options_entries_heading_enabled": {
+		"message": "இயக்கப்பட்டது"
+	},
+	"options_entries_heading_label": {
+		"message": "சிட்டை"
+	},
+	"options_entries_heading_category": {
+		"message": "வகை"
+	},
+	"options_entries_heading_string": {
+		"message": "சரம்"
+	},
+	"useragent_category_mobile": {
+		"message": "மொபைல்"
+	},
+	"useragent_category_bot": {
+		"message": "போட்"
+	},
+	"useragent_category_other": {
+		"message": "மற்றொன்று"
+	},
+	"icon_title_random": {
+		"message": "சீரற்ற பயன்முறை"
+	},
+	"icon_title_enabled": {
+		"message": "இயக்கப்பட்டது"
+	},
+	"icon_title_disabled": {
+		"message": "முடக்கப்பட்டது"
+	},
+	"icon_title_override_disabled": {
+		"message": "மேலெழுதுவதன் மூலம் முடக்கப்பட்டது"
+	},
+	"popup_item_override": {
+		"message": "டொமைனுக்கு மேலெழுதவும்"
+	},
+	"popup_item_override_tpl": {
+		"message": "“$HOSTNAME$”",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"popup_item_random": {
+		"message": "சீரற்ற பயன்முறையை இயக்கவும்"
+	},
+	"popup_item_random_categories": {
+		"message": "வகைகள்:"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "தொடக்கத்தில் மட்டுமே"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "ஒவ்வொன்றும்:"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "மணித்துளி (கள்)"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "மணி (கள்)"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "நாள் (கள்)"
+	},
+	"popup_item_default": {
+		"message": "இயல்புநிலை"
+	}
+}

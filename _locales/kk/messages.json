@@ -1,0 +1,148 @@
+{
+	"popup_item_options": {
+		"message": "Баптаулар…",
+		"description": "The label of the menu item for opening the extension's preference page"
+	},
+	"useragent_category_other": {
+		"message": "Басқа",
+		"description": "Default category label for unclassified client software"
+	},
+	"icon_title_disabled": {
+		"message": "Өшірілген",
+		"description": "Text displayed in the browser action icon tooltip when no request processing is being done because of the global setting"
+	},
+	"popup_item_default": {
+		"message": "Әдепкі",
+		"description": "The label of the menu item that disables the User-Agent overrider and lets the browser send its default User-Agent string"
+	},
+	"options_entries_heading_category": {
+		"message": "Санат",
+		"description": "Options page table editor heading for the column with general category of the given User-Agent-String"
+	},
+	"options_entries_heading_enabled": {
+		"message": "Қосылған",
+		"description": "Options page table editor heading for the column allowing to enabled or disable items"
+	},
+	"popup_item_random_categories": {
+		"message": "Санаттар:",
+		"description": "The section header of the categories selection of random selection mode"
+	},
+	"options_entries_switch_text": {
+		"message": "Мәтіндік режімге ауысу",
+		"description": "Options page link for switching from table to text mode"
+	},
+	"icon_title_random": {
+		"message": "Кездейсоқ режім",
+		"description": "Text displayed in the browser action icon tooltip when the User-Agent header is choosen at random"
+	},
+	"option_badge_text": {
+		"message": "User-Agent атауы белгішенің үстінде көрсетілсін бе?",
+		"description": "Text of checkbox option to show/hide the two to four letter abbreviations displayed ontop of the browser action icon"
+	},
+	"option_popup_override_size": {
+		"message": "Қалқымалы терезе/мәзірдің әдепкі өлшемін мәжбүрлі орнату",
+		"description": "Text of checkbox option to force the extension popup to a static/larger size than it would normally be according to the browser defaults (note that this also has a description attached)"
+	},
+	"useragent_category_mobile": {
+		"message": "Мобильді құрылғы",
+		"description": "Default category label for browsers on mobile devices"
+	},
+	"icon_title_enabled": {
+		"message": "Қосылған",
+		"description": "Text displayed in the browser action icon tooltip when request processing is being done because of the global setting"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "Әр:",
+		"description": "The label of the menu item for enabling the time-based User-Agent randomization at regular intervals"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "Іске қосылғанда ғана",
+		"description": "The label of the menu item for enabling the time-based User-Agent randomization only on extension and browser startup"
+	},
+	"option_random_jitter": {
+		"message": "Кездейсоқ режімнің ауытқуы",
+		"description": "Text of numeric option (0-100) for setting by how many per-cent the random-interval value should (on avarage) be varied"
+	},
+	"options_entries_reset": {
+		"message": "Бастапқы мәндерді қайтару",
+		"description": "Options page link for loading the entries defaults"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "Қайтаруды болдырмау",
+		"description": "Label of button for undoing a reset (displayed below the text that asserts that the options have just been reset)"
+	},
+	"option_popup_override_size_description": {
+		"message": "Құрылғыңызда қалқымалы терезе тым кішкентай көрінсе, осыны қосыңыз",
+		"description": "Description text of checkbox option to force the extension popup to a static/larger size than it would normally be according to the browser defaults"
+	},
+	"extension_description": {
+		"message": "Браузердің User-Agent жолын оңай алмастыруға мүмкіндік береді",
+		"description": "Extension description"
+	},
+	"popup_item_override_tpl": {
+		"message": "“$HOSTNAME$”",
+		"description": "Label of an individual selectable override domain",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"popup_item_override": {
+		"message": "Доменді айрықшалыққа қосу",
+		"description": "Label of the checkbox that can be used to switch from setting the global User-Agent string to a per-site value"
+	},
+	"icon_title_override_disabled": {
+		"message": "Айрықшалық ретінде өшірілген",
+		"description": "Text displayed in the browser action icon tooltip when no request processing is being done because of an override being set"
+	},
+	"icon_title_override_enabled": {
+		"message": "Айрықшалық ретінде қосылған",
+		"description": "Text displayed in the browser action icon tooltip when request processing is being done because of an override being set"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "Күн",
+		"description": "A User-Agent randomization time interval"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "Сағат",
+		"description": "A User-Agent randomization time interval"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "Минут",
+		"description": "A User-Agent randomization time interval"
+	},
+	"popup_item_random": {
+		"message": "Кездейсоқ режімді қосу",
+		"description": "The label of the menu item for enabling time-based User-Agent randomization"
+	},
+	"useragent_category_bot": {
+		"message": "Бот",
+		"description": "Default category label for search engine bots"
+	},
+	"useragent_category_desktop": {
+		"message": "Үстелдік компьютер",
+		"description": "Default category label for browsers on desktop devices"
+	},
+	"options_entries_heading_string": {
+		"message": "Жол",
+		"description": "Options page table editor heading for the column with the actual server-reported User-Agent-Strings"
+	},
+	"options_entries_heading_label": {
+		"message": "Атау",
+		"description": "Options page table editor heading for the column with user-facing User-Agent-String labels"
+	},
+	"options_entries_switch_table": {
+		"message": "Кесте режіміне ауысу",
+		"description": "Options page link for switching from text to table mode"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "Мәндер әдепкіге қайтарылды",
+		"description": "Text of popup that is shown after the reset link has been clicked"
+	},
+	"options_entries_caption": {
+		"message": "User-Agent жазбалары",
+		"description": "Header text of the entries editor in the extension options"
+	}
+}

@@ -1,0 +1,31 @@
+# Modules used during development
+/node_modules
+
+# Build output
+/dist
+
+# Temporary files used by some editors
+*.swp
+*~
+
+# Project storage of some editors
+/.idea
+/.project
+/.settings
+
+# Stuff created by some desktop environments
+.directory
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test scratch space
+/.test-profile*
+/.test-chrome
+
+# Local secrets (Wikidata / AMO / etc.)
+/wikidata-api-secret.txt
+/web-ext-api-secret.txt
+
+# Icon build scratch space
+/.icons-tmp

@@ -1,0 +1,23 @@
+{
+	"name": "user-agent-switcher-chrome",
+	"version": "1.4.0",
+	"private": true,
+	"description": "Chrome (Manifest V3) port of the User-Agent Switcher WebExtension",
+	"license": "GPL-3.0-or-later",
+	"homepage": "https://gitlab.com/ntninja/user-agent-switcher",
+	"scripts": {
+		"submodules": "git submodule update --init --recursive",
+		"typecheck": "tsc -p jsconfig.json",
+		"lint": "eslint .",
+		"test": "node scripts/test.mjs",
+		"build": "node scripts/build.mjs",
+		"icons": "node scripts/build-icons.mjs",
+		"browser:install": "npx --yes @puppeteer/browsers install chrome@stable"
+	},
+	"devDependencies": {
+		"@types/chrome": "^0.1.43",
+		"eslint": "^8.57.1",
+		"typescript": "^5.9.3",
+		"web-ext-types": "^3.2.1"
+	}
+}

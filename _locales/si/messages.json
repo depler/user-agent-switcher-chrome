@@ -1,0 +1,115 @@
+{
+    "useragent_category_mobile": {
+        "message": "ජංගම",
+        "description": "Default category label for browsers on mobile devices"
+    },
+    "options_entries_heading_enabled": {
+        "message": "සබල කර ඇත",
+        "description": "Options page table editor heading for the column allowing to enabled or disable items"
+    },
+    "popup_item_options": {
+        "message": ""
+    },
+    "popup_item_random_interval_unit_minutes": {
+        "message": ""
+    },
+    "options_entries_reset": {
+        "message": ""
+    },
+    "extension_description": {
+        "message": ""
+    },
+    "options_entries_switch_text": {
+        "message": ""
+    },
+    "popup_item_random_interval_unit_days": {
+        "message": ""
+    },
+    "icon_title_disabled": {
+        "message": ""
+    },
+    "popup_item_random_interval_unit_hours": {
+        "message": ""
+    },
+    "options_entries_reset_undo_text": {
+        "message": ""
+    },
+    "option_random_jitter": {
+        "message": ""
+    },
+    "options_entries_heading_category": {
+        "message": ""
+    },
+    "options_entries_heading_label": {
+        "message": ""
+    },
+    "popup_item_override_tpl": {
+        "message": "",
+        "placeholders": {
+            "hostname": {
+                "content": "$1",
+                "example": "https://www.example.net"
+            }
+        }
+    },
+    "options_entries_reset_undo_button": {
+        "message": ""
+    },
+    "useragent_category_desktop": {
+        "message": ""
+    },
+    "icon_title_override_enabled": {
+        "message": ""
+    },
+    "useragent_category_other": {
+        "message": ""
+    },
+    "popup_item_random_interval_mode_timed": {
+        "message": ""
+    },
+    "useragent_category_bot": {
+        "message": ""
+    },
+    "icon_title_override_disabled": {
+        "message": ""
+    },
+    "option_popup_override_size": {
+        "message": ""
+    },
+    "options_entries_caption": {
+        "message": ""
+    },
+    "popup_item_random_categories": {
+        "message": ""
+    },
+    "icon_title_enabled": {
+        "message": ""
+    },
+    "popup_item_default": {
+        "message": ""
+    },
+    "popup_item_random": {
+        "message": ""
+    },
+    "popup_item_override": {
+        "message": ""
+    },
+    "option_badge_text": {
+        "message": ""
+    },
+    "icon_title_random": {
+        "message": ""
+    },
+    "option_popup_override_size_description": {
+        "message": ""
+    },
+    "options_entries_heading_string": {
+        "message": ""
+    },
+    "options_entries_switch_table": {
+        "message": ""
+    },
+    "popup_item_random_interval_mode_restart": {
+        "message": ""
+    }
+}

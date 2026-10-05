@@ -1,0 +1,21 @@
+{
+	"extension_description": {
+		"message": "Te permite sobrescribir el User-Agent del navegador"
+	},
+	
+	"options_entries_caption": {
+		"message": "Opciones de User-Agent"
+	},
+	
+	"popup_item_options": {
+		"message": "Preferencias…"
+	},
+	
+	"icon_title_enabled": {
+		"message": "Activado"
+	},
+	
+	"icon_title_disabled": {
+		"message": "Desactivado"
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"noEmit": true,
+		"strict": true,
+		"target": "esnext",
+		"module": "system",
+		"moduleResolution": "node",
+		"lib": ["esnext", "dom", "dom.iterable", "webworker"],
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"skipLibCheck": true,
+		"types": []
+	},
+	"include": [
+		"background/**/*.js",
+		"background/**/*.ts",
+		"content/**/*.js",
+		"content/**/*.ts",
+		"ui/**/*.js",
+		"ui/**/*.ts",
+		"utils/**/*.js",
+		"utils/**/*.ts",
+		"types/**/*.d.ts",
+
+		"node_modules/web-ext-types/global/index.d.ts",
+		"node_modules/@types/chrome/index.d.ts",
+		"deps/psl.d.ts"
+	],
+	"exclude": [
+		"deps/browscap",
+		"deps/public-suffix-list",
+		"deps/wext-options",
+		"deps/webextension-polyfill",
+		"deps/browscap-js-cache-fetch",
+		"scripts",
+		"dist"
+	]
+}

@@ -1,0 +1,148 @@
+{
+	"extension_description": {
+		"message": "Ubah dengan mudah User-Agent pada browser",
+		"description": "Penjelasan Pengaya"
+	},
+	"option_badge_text": {
+		"message": "Tampilkan User-Agent sebagai teks lencana pada ikon?",
+		"description": "Teks dalam pilihan centang untuk menampilkan dan menyembunyikan dua hingga empat huruf singkatan yang ditampilkan di atas ikon tindakan peramban"
+	},
+	"option_random_jitter": {
+		"message": "Variasi mode acak",
+		"description": "Teks pilihan angka (0-100) sebagai pengaturan seberapa besar variasi (rerata) seharusnya setiap perseratus interval-keacakan"
+	},
+	"options_entries_caption": {
+		"message": "Masukan Agen-Pengguna",
+		"description": "Teks tajuk penyunting masukan di pengaturan pengaya"
+	},
+	"options_entries_reset": {
+		"message": "Pulihkan ke nilai asali",
+		"description": "Tautan pengaturan halaman untuk memuat masukan asali"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "Nilai asali telah dipulihkan",
+		"description": "Teks yang muncul setelah tautan pemulihan diklik"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "Kembalikan pemulihan",
+		"description": "Label tombol untuk mengembalikan pemulihan (ditampilkan di bawah teks yang menegaskan pilihan telah dipulihkan)"
+	},
+	"options_entries_switch_text": {
+		"message": "Ubah ke Mode Teks",
+		"description": "Tautan pengaturan halaman untuk mengubah dari mode tabel ke mode teks"
+	},
+	"options_entries_switch_table": {
+		"message": "Ubah ke Mode Tabel",
+		"description": "Tautan pengaturan halaman untuk mengubah dari mode teks ke mode tabel"
+	},
+	"options_entries_heading_label": {
+		"message": "Label",
+		"description": "Tajuk penyunting tabel pengaturan halaman untuk kolom dengan label tampilan pengguna pengenal Agen-Pengguna"
+	},
+	"options_entries_heading_category": {
+		"message": "Kategori",
+		"description": "Tajuk penyunting tabel pengaturan halaman untuk kolom dengan kategori umum untuk pengenal Agen-Pengguna tertentu"
+	},
+	"options_entries_heading_string": {
+		"message": "String",
+		"description": "Tajuk penyunting tabel pengaturan halaman untuk kolom dengan pengenal Agen-Pengguna sesungguhnya yang dikirim ke peladen"
+	},
+	"useragent_category_desktop": {
+		"message": "Desktop",
+		"description": "Label kategori asali untuk peramban dengan parangkat desktop"
+	},
+	"useragent_category_mobile": {
+		"message": "Bergerak",
+		"description": "Label kategori asali untuk peramban dengan parangkat bergerak"
+	},
+	"useragent_category_bot": {
+		"message": "Bot",
+		"description": "Label kategori asali untuk peramban dengan perangkat bergerak perayap mesin pencari"
+	},
+	"useragent_category_other": {
+		"message": "Lain",
+		"description": "Label kategori asali untuk peramban dengan perangkat lunak klien yang belum dikategorikan"
+	},
+	"icon_title_random": {
+		"message": "Mode Acak",
+		"description": "Teks yang ditampilkan di info-alat ikon tindakan peramban saat pengepala Agen-Pengguna ditentukan secara acak"
+	},
+	"icon_title_enabled": {
+		"message": "Dinyalakan",
+		"description": "Teks yang ditampilkan di info-alat ikon tindakan peramban saat permintaan telah dilaksanakan"
+	},
+	"icon_title_disabled": {
+		"message": "Dimatikan",
+		"description": "Teks yang ditampilkan di info-alat ikon tindakan peramban saat tidak ada permintaan yang dilaksanakan"
+	},
+	"popup_item_options": {
+		"message": "Pengaturan…",
+		"description": "Label pilihan menu untuk membuka halaman pengaturan pengaya"
+	},
+	"popup_item_random": {
+		"message": "Nyalakan Mode Acak",
+		"description": "Label pilihan menu untuk menyalakan pengacakan Agen-Pengguna berdasarkan waktu"
+	},
+	"popup_item_random_categories": {
+		"message": "Kategori:",
+		"description": "Tajuk bidang kategori terpilih dalam mode pemilihan acak"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "Hanya saat mulai",
+		"description": "Label menu untuk mengaktifkan pengacakan Agen-Pengguna berdasarkan waktu saat peramban dan pengaya dimulai"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "Setiap:",
+		"description": "Label menu untuk mengaktifkan pengacakan Agen-Pengguna berdasarkan waktu saat pengulangan yang teratur"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "Menit",
+		"description": "Selang waktu pengacakan Agen-Pengguna"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "Jam",
+		"description": "Selang waktu pengacakan Agen-Pengguna"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "Hari",
+		"description": "Selang waktu pengacakan Agen-Pengguna"
+	},
+	"popup_item_default": {
+		"message": "Asali",
+		"description": "Label menu untuk mematikan Pengubahan-Agen-Pengguna dan membiarkan peramban mengirim identitas Agen-Pengguna miliknya sendiri"
+	},
+	"icon_title_override_enabled": {
+		"message": "Pengaturan per situs dinyalakan",
+		"description": "Text displayed in the browser action icon tooltip when request processing is being done because of an override being set"
+	},
+	"icon_title_override_disabled": {
+		"message": "Pengaturan per situs mati",
+		"description": "Text displayed in the browser action icon tooltip when no request processing is being done because of an override being set"
+	},
+	"popup_item_override": {
+		"message": "Ubah untuk domain ini saja",
+		"description": "Label of the checkbox that can be used to switch from setting the global User-Agent string to a per-site value"
+	},
+	"popup_item_override_tpl": {
+		"message": "“$HOSTNAME$”",
+		"description": "Label of an individual selectable override domain",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"options_entries_heading_enabled": {
+		"message": "Dinyalakan",
+		"description": "Options page table editor heading for the column allowing to enabled or disable items"
+	},
+	"option_popup_override_size": {
+		"message": "Paksa ukuran nilai asal popup/menu",
+		"description": "Text of checkbox option to force the extension popup to a static/larger size than it would normally be according to the browser defaults (note that this also has a description attached)"
+	},
+	"option_popup_override_size_description": {
+		"message": "Aktifkan jika popup ditampilkan terlalu kecil di perangkat Anda",
+		"description": "Description text of checkbox option to force the extension popup to a static/larger size than it would normally be according to the browser defaults"
+	}
+}

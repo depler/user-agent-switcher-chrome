@@ -1,0 +1,113 @@
+{
+	"useragent_category_bot": {
+		"message": "봇"
+	},
+	"popup_item_default": {
+		"message": "기본값"
+	},
+	"option_popup_override_size_description": {
+		"message": "팝업이 너무 작게 보일 경우 설정하세요"
+	},
+	"options_entries_caption": {
+		"message": "User-Agent 항목"
+	},
+	"options_entries_reset_undo_button": {
+		"message": "초기화 취소"
+	},
+	"options_entries_switch_text": {
+		"message": "텍스트 모드로 전환"
+	},
+	"options_entries_switch_table": {
+		"message": "표 모드로 전환"
+	},
+	"options_entries_heading_enabled": {
+		"message": "활성화"
+	},
+	"options_entries_heading_label": {
+		"message": "레이블"
+	},
+	"useragent_category_desktop": {
+		"message": "데스크탑"
+	},
+	"icon_title_override_enabled": {
+		"message": "도메인별 설정으로 활성화됨"
+	},
+	"popup_item_random": {
+		"message": "랜덤 모드 활성화"
+	},
+	"popup_item_random_categories": {
+		"message": "카테고리:"
+	},
+	"option_badge_text": {
+		"message": "아이콘에 User-Agent를 배지로 표시하시겠습니까?"
+	},
+	"option_popup_override_size": {
+		"message": "기본 팝업/메뉴 크기 강제 적용"
+	},
+	"option_random_jitter": {
+		"message": "랜덤 모드 간격"
+	},
+	"options_entries_reset": {
+		"message": "기본값으로 변경하기"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "기본값으로 변경되었습니다"
+	},
+	"options_entries_heading_string": {
+		"message": "문자열"
+	},
+	"icon_title_enabled": {
+		"message": "활성화"
+	},
+	"useragent_category_mobile": {
+		"message": "모바일"
+	},
+	"useragent_category_other": {
+		"message": "기타"
+	},
+	"icon_title_override_disabled": {
+		"message": "도메인별 설정으로 비활성화됨"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "시간"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "일"
+	},
+	"extension_description": {
+		"message": "손쉽게 User-Agent 문자열을 적용할 수 있습니다"
+	},
+	"options_entries_heading_category": {
+		"message": "카테고리"
+	},
+	"icon_title_disabled": {
+		"message": "비활성화"
+	},
+	"popup_item_options": {
+		"message": "설정…"
+	},
+	"popup_item_override": {
+		"message": "도메인별 적용"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "브라우저 시작시에만"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "매:"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "분"
+	},
+	"icon_title_random": {
+		"message": "랜덤 모드"
+	},
+	"popup_item_override_tpl": {
+		"message": "\"$HOSTNAME$\"",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	}
+}

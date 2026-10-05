@@ -1,0 +1,148 @@
+{
+	"popup_item_options": {
+		"message": "Postavke …",
+		"description": "The label of the menu item for opening the extension's preference page"
+	},
+	"popup_item_random_interval_unit_minutes": {
+		"message": "minuta",
+		"description": "A User-Agent randomization time interval"
+	},
+	"options_entries_reset": {
+		"message": "Vrati na standardne vrijednosti",
+		"description": "Options page link for loading the entries defaults"
+	},
+	"extension_description": {
+		"message": "Jednostavno zamijeni izraz korisničkog agenta preglednika",
+		"description": "Extension description"
+	},
+	"options_entries_switch_text": {
+		"message": "Prebaci na tekstualni modus",
+		"description": "Options page link for switching from table to text mode"
+	},
+	"popup_item_random_interval_unit_days": {
+		"message": "dana",
+		"description": "A User-Agent randomization time interval"
+	},
+	"options_entries_heading_enabled": {
+		"message": "Aktivirano",
+		"description": "Options page table editor heading for the column allowing to enabled or disable items"
+	},
+	"icon_title_disabled": {
+		"message": "Deaktivirano",
+		"description": "Text displayed in the browser action icon tooltip when no request processing is being done because of the global setting"
+	},
+	"popup_item_random_interval_unit_hours": {
+		"message": "sata",
+		"description": "A User-Agent randomization time interval"
+	},
+	"options_entries_reset_undo_text": {
+		"message": "Vraćeno na standardne vrijednosti",
+		"description": "Text of popup that is shown after the reset link has been clicked"
+	},
+	"option_random_jitter": {
+		"message": "Varijanca slučajnog modusa",
+		"description": "Text of numeric option (0-100) for setting by how many per-cent the random-interval value should (on avarage) be varied"
+	},
+	"options_entries_heading_category": {
+		"message": "Kategorija",
+		"description": "Options page table editor heading for the column with general category of the given User-Agent-String"
+	},
+	"options_entries_heading_label": {
+		"message": "Etiketa",
+		"description": "Options page table editor heading for the column with user-facing User-Agent-String labels"
+	},
+	"popup_item_override_tpl": {
+		"message": "„$HOSTNAME$”",
+		"description": "Label of an individual selectable override domain",
+		"placeholders": {
+			"hostname": {
+				"content": "$1",
+				"example": "https://www.example.net"
+			}
+		}
+	},
+	"options_entries_reset_undo_button": {
+		"message": "Poništi vraćanje",
+		"description": "Label of button for undoing a reset (displayed below the text that asserts that the options have just been reset)"
+	},
+	"useragent_category_desktop": {
+		"message": "Desktop računala",
+		"description": "Default category label for browsers on desktop devices"
+	},
+	"icon_title_override_enabled": {
+		"message": "Aktivirano zamjenom",
+		"description": "Text displayed in the browser action icon tooltip when request processing is being done because of an override being set"
+	},
+	"useragent_category_other": {
+		"message": "Ostalo",
+		"description": "Default category label for unclassified client software"
+	},
+	"popup_item_random_interval_mode_timed": {
+		"message": "Svakih:",
+		"description": "The label of the menu item for enabling the time-based User-Agent randomization at regular intervals"
+	},
+	"useragent_category_bot": {
+		"message": "Botovi",
+		"description": "Default category label for search engine bots"
+	},
+	"icon_title_override_disabled": {
+		"message": "Deaktivirano zamjenom",
+		"description": "Text displayed in the browser action icon tooltip when no request processing is being done because of an override being set"
+	},
+	"option_popup_override_size": {
+		"message": "Prisili standardnu veličinu skočnog prozora, tj. izbornika",
+		"description": "Text of checkbox option to force the extension popup to a static/larger size than it would normally be according to the browser defaults (note that this also has a description attached)"
+	},
+	"options_entries_caption": {
+		"message": "Zapisi korisničkih agenata",
+		"description": "Header text of the entries editor in the extension options"
+	},
+	"popup_item_random_categories": {
+		"message": "Kategorije:",
+		"description": "The section header of the categories selection of random selection mode"
+	},
+	"icon_title_enabled": {
+		"message": "Aktivirano",
+		"description": "Text displayed in the browser action icon tooltip when request processing is being done because of the global setting"
+	},
+	"popup_item_default": {
+		"message": "Standardno",
+		"description": "The label of the menu item that disables the User-Agent overrider and lets the browser send its default User-Agent string"
+	},
+	"useragent_category_mobile": {
+		"message": "Mobilni uređaji",
+		"description": "Default category label for browsers on mobile devices"
+	},
+	"popup_item_random": {
+		"message": "Aktiviraj slučajni modus",
+		"description": "The label of the menu item for enabling time-based User-Agent randomization"
+	},
+	"popup_item_override": {
+		"message": "Zamijeni za domenu",
+		"description": "Label of the checkbox that can be used to switch from setting the global User-Agent string to a per-site value"
+	},
+	"option_badge_text": {
+		"message": "Korisničkog agenta prikazati kao značku s tekstom na ikoni?",
+		"description": "Text of checkbox option to show/hide the two to four letter abbreviations displayed ontop of the browser action icon"
+	},
+	"icon_title_random": {
+		"message": "Slučajni modus",
+		"description": "Text displayed in the browser action icon tooltip when the User-Agent header is choosen at random"
+	},
+	"option_popup_override_size_description": {
+		"message": "Aktiviraj, ako je skočni prozor premalen na tvom uređaju",
+		"description": "Description text of checkbox option to force the extension popup to a static/larger size than it would normally be according to the browser defaults"
+	},
+	"options_entries_heading_string": {
+		"message": "Izraz",
+		"description": "Options page table editor heading for the column with the actual server-reported User-Agent-Strings"
+	},
+	"options_entries_switch_table": {
+		"message": "Prebaci na tabličasti modus",
+		"description": "Options page link for switching from text to table mode"
+	},
+	"popup_item_random_interval_mode_restart": {
+		"message": "Samo pri pokretanju",
+		"description": "The label of the menu item for enabling the time-based User-Agent randomization only on extension and browser startup"
+	}
+}
