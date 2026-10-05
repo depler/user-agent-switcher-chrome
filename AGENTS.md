@@ -7,6 +7,11 @@ how to run, develop and test it, plus the places that are easy to break.
 > Code, comments and JSDoc are in English. Code style is inherited from the
 > original: **tabs**, **double quotes**, semicolons, JSDoc types (no `tsc` emit).
 
+> **Never `git commit` or `git push` automatically.** Create commits or push
+> only when the user explicitly asks for it. Staging/editing files as part of a
+> requested change is fine, but do not turn it into a commit (or a push) on your
+> own initiative — even if a commit would be the natural next step.
+
 ---
 
 ## 1. What this is
