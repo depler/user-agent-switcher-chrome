@@ -18,14 +18,61 @@ version:
 This repository is an independent Chrome adaptation. It is not published on the
 Chrome Web Store — install it as an unpacked extension (see below).
 
-## Load it
+## Install in Chrome (locally)
 
-1. Open `chrome://extensions`.
-2. Enable **Developer mode**.
-3. Click **Load unpacked** and select this folder (`user-agent-switcher-chrome`).
+This extension is **not on the Chrome Web Store**; it is installed as an
+**unpacked** extension. Chrome loads the folder that contains `manifest.json`
+directly — the built ZIP is an archive for releases/uploads, **not** an
+installer.
 
-Chrome will show installation errors in the `chrome://extensions` card if
-anything is wrong.
+### From source (development)
+
+1. Initialise the submodules first — the runtime needs
+   `deps/public-suffix-list/dist/psl.js` and `deps/wext-options/options.js`:
+   ```sh
+   git submodule update --init --recursive   # or: npm run submodules
+   ```
+2. Open `chrome://extensions` in the address bar.
+3. Toggle **Developer mode** on (top-right corner).
+4. Click **Load unpacked** and select the root of this repository (the folder
+   that has `manifest.json`).
+5. The extension appears in the list. Pin it through the puzzle-piece toolbar
+   menu to reach the **popup**; the **options page** opens from the popup (the
+   gear icon) or from the extension's details on `chrome://extensions`.
+
+Chrome reports any installation error directly on the extension's card there.
+
+### From a release ZIP
+
+1. Download `user-agent-switcher-chrome-<version>.zip` from the
+   [Releases](https://github.com/depler/user-agent-switcher-chrome/releases)
+   page — or produce it yourself with `npm run build`.
+2. Extract the ZIP into a folder; `manifest.json` must end up at the root of
+   the extracted folder.
+3. Follow steps 2–5 above, pointing **Load unpacked** at that extracted folder.
+
+> Chrome cannot install the ZIP directly — it is not a signed store package.
+> Off-store `.crx` installs are blocked outside enterprise policy, so
+> **Load unpacked** is the supported way to run this build.
+
+### After changing the code
+
+Press the reload (⟳) button on the extension's card in `chrome://extensions`
+so the service worker and the declarativeNetRequest rule set are rebuilt.
+
+### Verify that it works
+
+- the **request header**: open
+  https://www.whatismybrowser.com/detect/what-is-my-user-agent/ and check the
+  reported User-Agent;
+- the **JavaScript value**: open DevTools → Console and evaluate
+  `navigator.userAgent`.
+
+## Screenshots
+
+| Popup — pick a User-Agent and an override scope | Result — the spoofed UA on a detection site |
+| --- | --- |
+| ![Popup with User-Agent selection and per-domain override](docs/img/popup.png) | ![Android Firefox detected](docs/img/detection.png) |
 
 ## What changed compared to the Firefox original
 
