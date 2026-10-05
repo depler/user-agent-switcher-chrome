@@ -1,10 +1,22 @@
 # User-Agent Switcher — Chrome port
 
-A Manifest V3 port of [ntninja's *User-Agent Switcher*](https://gitlab.com/ntninja/user-agent-switcher)
+An **unofficial Manifest V3 port** of [ntninja's *User-Agent Switcher*](https://gitlab.com/ntninja/user-agent-switcher)
 (originally a Firefox WebExtension). It overrides the `User-Agent` request
 header and the page-visible `navigator.*` values, globally or per site, and
 keeps the original popup, options page, random-rotation mode and translation
 catalogue.
+
+## Original project (Firefox)
+
+This port is based on the upstream Firefox add-on, which remains the canonical
+version:
+
+- **Source code:** https://gitlab.com/ntninja/user-agent-switcher
+- **Firefox add-on:** https://addons.mozilla.org/firefox/addon/uaswitcher/
+  (also available for Firefox for Android)
+
+This repository is an independent Chrome adaptation. It is not published on the
+Chrome Web Store — install it as an unpacked extension (see below).
 
 ## Load it
 
@@ -35,7 +47,7 @@ Chrome.
 | Firefox-only `console.exception` | shimmed in `utils/polyfill.js` |
 | locales using an undeclared `$HOSTNAME$` placeholder | `placeholders` added (Chrome rejects undefined placeholders) |
 
-`webextension-polyfill` is bundled (`utils/browser-polyfill.js`) so that the
+`webextension-polyfill` is bundled (`deps/browser-polyfill.js`) so that the
 shared code can keep using the Firefox-style promise-based `browser.*` API.
 
 ## How navigator spoofing works
@@ -45,7 +57,7 @@ inline scripts may run before an asynchronous `chrome.storage` read
 completes. The port therefore smuggles the per-document navigator data-set to
 the page through a `Server-Timing` **response header** that the
 service worker attaches with `declarativeNetRequest`
-(`background/dnr.js` → `Content/navigator-override.js` reads it back
+(`background/dnr.js` → `content/navigator-override.js` reads it back
 synchronously from `performance.getEntriesByType("navigation")` at
 `document_start`). The marker is filtered out of the Performance Timeline
 again after it has been consumed.
@@ -126,5 +138,5 @@ UASW_CDP_PORT=9222 npm test
 
 ## License
 
-Same as the original: GPL-3.0-or-later. See `../user-agent-switcher/LICENSE.md`.
+Same as the original: GPL-3.0-or-later. See `LICENSE.md`.
 The bundled `deps/*` components keep their own licenses.
