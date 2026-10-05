@@ -388,9 +388,11 @@ npm install
 ### 5.6 CI (GitHub Actions)
 
 `.github/workflows/daily-release.yml` runs once a day (plus manual
-`workflow_dispatch`). It regenerates the User-Agent list the same way the
-upstream author does — `scripts/user-agent-update.py` against Wikidata — and,
-**only if `assets/user-agents.txt` changed**:
+`workflow_dispatch`, whose `force` checkbox skips the "did the list change?"
+check and runs the whole build/release pipeline anyway). It regenerates the
+User-Agent list the same way the upstream author does — `scripts/user-agent-update.py`
+against Wikidata — and, **only if `assets/user-agents.txt` changed** (or `force`
+is set):
 
 1. bumps the last component of `version` in `manifest.json`
    (`scripts/bump-version.mjs`, `1.4.0` → `1.4.1`);

@@ -14,6 +14,11 @@ on:
     # Every day at 04:17 UTC (off-peak, to avoid the top-of-the-hour rush).
     - cron: "17 4 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Build and release even if the User-Agent list did not change"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -69,7 +74,10 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          if git diff --quiet -- assets/user-agents.txt; then
+          if [ "${{ inputs.force }}" = "true" ]; then
+            echo "Forced run: ignoring the User-Agent list diff"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif git diff --quiet -- assets/user-agents.txt; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
