@@ -5,7 +5,7 @@
 	"name": "User-Agent Switcher",
 	"description": "__MSG_extension_description__",
 
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"homepage_url": "https://gitlab.com/ntninja/user-agent-switcher",
 
 	"icons": {
