@@ -387,7 +387,7 @@ npm install
 
 ### 5.6 CI (GitHub Actions)
 
-`.github/workflows/daily-release.yml` runs once a day (plus manual
+`.github/workflows/build-release.yml` runs once a day (plus manual
 `workflow_dispatch`, whose `force` checkbox skips the "did the list change?"
 check and runs the whole build/release pipeline anyway). It regenerates the
 User-Agent list the same way the upstream author does — `scripts/user-agent-update.py`
@@ -496,7 +496,7 @@ scripts/
   build-icons.mjs                 SVG → PNG (npm run icons)
   bump-version.mjs                version bump for the daily release workflow
   user-agent-update.py            UA list updater (from the original)
-.github/workflows/daily-release.yml  daily UA update + release (see §5.6)
+.github/workflows/build-release.yml  UA update + build + release (see §5.6)
 jsconfig.json .eslintrc.json .editorconfig
 package.json package-lock.json    dev tooling
 .vscode/tasks.json                tasks: typecheck/lint/test/build/icons

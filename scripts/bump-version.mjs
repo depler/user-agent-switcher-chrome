@@ -1,7 +1,7 @@
 // Increment the last numeric component of the extension version in
 // `manifest.json` by one (e.g. `1.4.0` -> `1.4.1`) and print the new version.
 //
-// Used by `.github/workflows/daily-release.yml`. The file is edited in place
+// Used by `.github/workflows/build-release.yml`. The file is edited in place
 // with a regex so the surrounding formatting stays untouched.
 
 import { readFileSync, writeFileSync } from "node:fs";
