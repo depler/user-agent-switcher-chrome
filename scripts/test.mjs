@@ -19,13 +19,14 @@
 
 import { spawn } from "node:child_process";
 import { request as httpRequest } from "node:http";
-import { existsSync, readdirSync, rmSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, rmSync, statSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { setTimeout as sleep } from "node:timers/promises";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const EXT = resolve(HERE, "..");
+const MANIFEST_VERSION = JSON.parse(readFileSync(join(EXT, "manifest.json"), "utf8")).version;
 const PORT = Number(process.env.UASW_CDP_PORT) || 9333;
 const EXTERNAL = !!process.env.UASW_CDP_PORT;
 const TARGET_UA = "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0";
@@ -205,7 +206,7 @@ try {
 
 	check("browser polyfill present", (await evaluate(sw, "typeof browser")) === "object");
 	check("shared utils loaded", (await evaluate(sw, "typeof utils")) === "object");
-	check("manifest version", (await evaluate(sw, "chrome.runtime.getManifest().version")) === "1.4.0");
+	check("manifest version", (await evaluate(sw, "chrome.runtime.getManifest().version")) === MANIFEST_VERSION);
 
 	const keys = await evaluate(sw, "browser.storage.local.get(null).then(o => Object.keys(o).sort().join(','))");
 	check("storage initialized", keys.includes("available") && keys.includes("current"), keys);
