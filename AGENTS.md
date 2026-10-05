@@ -336,7 +336,14 @@ npm install
 | `npm test` | CDP smoke test (see §6). |
 | `npm run build` | `dist/user-agent-switcher-chrome-<version>.zip` (custom ZIP writer). |
 | `npm run icons` | SVG → PNG into `assets/icons/` via headless Chrome. |
-| `npm run browser:install` | Download Chrome for Testing (`@puppeteer/browsers`). |
+| `npm run browser:install` | Download Chrome for Testing (`@puppeteer/browsers`) into `./chrome/`. |
+
+> `@puppeteer/browsers install` defaults `--path` to the **current working
+> directory**, so `npm run browser:install` unpacks ~430 MB into `./chrome/`
+> (not into `~/.cache/puppeteer`, which is where `scripts/test.mjs` looks).
+> `chrome/` is therefore ignored in `.gitignore`, excluded from `npm run build`
+> (`EXCLUDE_ANY_DIR` in `scripts/build.mjs`) and from `eslint` (`ignorePatterns`).
+> Pass the binary explicitly as `UASW_CHROME=chrome/win64-*/chrome-win64/chrome.exe`.
 
 ### 5.4 Type-checking and linting (important — do not break)
 
@@ -363,7 +370,8 @@ npm install
   `importScripts`. Other globals (`utils`, `psl`, `__popup_*`, …) are declared by
   inline `/* global … */` comments in the files that need them. Do not add them
   to `globals` — you will get `no-redeclare` in the files that declare them.
-  `utils/browser-polyfill.js` and `deps/` are in `ignorePatterns`.
+  `utils/browser-polyfill.js`, `deps/` and the downloaded `chrome/` are in
+  `ignorePatterns`.
 
 ### 5.5 Code conventions
 
@@ -399,10 +407,14 @@ For automated runs use **Chrome for Testing** (branded builds block
 
 ```sh
 npm run browser:install
-UASW_CHROME=<path> npm test
+UASW_CHROME=chrome/win64-*/chrome-win64/chrome.exe npm test
 # or
 UASW_CDP_PORT=9222 npm test
 ```
+
+`npm run browser:install` writes to `./chrome/`, which the automatic
+`findChrome()` lookup does **not** scan (it checks Program Files,
+`~/.cache/puppeteer` and `%LOCALAPPDATA%\puppeteer`), so pass `UASW_CHROME`.
 
 What is asserted (21 checks):
 
@@ -459,6 +471,9 @@ jsconfig.json .eslintrc.json .editorconfig
 package.json package-lock.json    dev tooling
 .vscode/tasks.json                tasks: typecheck/lint/test/build/icons
 dist/                             build artifacts (gitignored)
+chrome/                           Chrome for Testing downloaded by
+                                  `npm run browser:install` (gitignored,
+                                  excluded from build/lint)
 ```
 
 ---
@@ -527,6 +542,11 @@ explicit path).
   extension**.
 - `jsconfig.json` with `types: []` requires `@types/chrome` to be included explicitly.
 - Do not add a `class` to the `utils.matchingengine` namespace (see §5.4).
+- `npm run browser:install` drops Chrome for Testing into `./chrome/` (the
+  `@puppeteer/browsers` CLI defaults `--path` to the cwd). Keep it out of git,
+  the ZIP and ESLint — if a new tool scans the repo, exclude `chrome/` there too,
+  otherwise it will lint/package hundreds of megabytes of third-party browser
+  files (this is what broke `npm run lint` after the first install).
 
 ---
 

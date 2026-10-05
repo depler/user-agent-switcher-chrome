@@ -12,7 +12,7 @@ import { deflateRawSync } from "node:zlib";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, "..");
 
-const EXCLUDE_ANY_DIR = new Set(["node_modules", ".git", ".vscode"]);
+const EXCLUDE_ANY_DIR = new Set(["node_modules", ".git", ".vscode", "chrome"]);
 const EXCLUDE_TOP_DIR = new Set(["dist", "scripts", "types"]);
 const EXCLUDE_FILES = new Set([
 	"package.json", "package-lock.json", "jsconfig.json", "tsconfig.json",

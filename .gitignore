@@ -4,6 +4,10 @@
 # Build output
 /dist
 
+# Chrome for Testing downloaded by `npm run browser:install`
+# (the @puppeteer/browsers CLI defaults to the current working directory)
+/chrome
+
 # Temporary files used by some editors
 *.swp
 *~

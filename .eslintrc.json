@@ -45,6 +45,7 @@
 	"ignorePatterns": [
 		"deps/",
 		"dist/",
-		"node_modules/"
+		"node_modules/",
+		"chrome/"
 	]
 }
