@@ -1,4 +1,4 @@
-name: Daily user-agent update and release
+name: Build and release
 
 # Once a day regenerate the User-Agent list (the part of the codebase that the
 # upstream author also updates automatically) and, if it changed, publish a new
@@ -106,8 +106,7 @@ jobs:
             echo "Chrome for Testing executable not found" >&2
             exit 1
           fi
-          echo "UASW_CHROME=${browser}" >> "$GITHUB_ENV"
-          npm test
+          UASW_CHROME="$browser" npm test
 
       - name: Push and publish release
         if: steps.changes.outputs.changed == 'true'
