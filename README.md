@@ -14,9 +14,16 @@ version:
 - **Source code:** https://gitlab.com/ntninja/user-agent-switcher
 - **Firefox add-on:** https://addons.mozilla.org/firefox/addon/uaswitcher/
   (also available for Firefox for Android)
+- **Author:** ntninja (Erin of Yukis) — [GitHub](https://github.com/ntninja),
+  [GitLab](https://gitlab.com/ntninja/), [Codeberg](https://codeberg.org/ntninja/)
 
-This repository is an independent Chrome adaptation. It is not published on the
-Chrome Web Store — install it as an unpacked extension (see below).
+This repository is an independent Chrome adaptation.
+
+> 🙏 **Sorry — the extension is not in the Chrome Web Store yet.** Getting listed
+> there requires a paid Google developer account, so for now it is distributed
+> through [GitHub Releases](https://github.com/depler/user-agent-switcher-chrome/releases)
+> and installed manually as an unpacked extension. Please bear with us — it
+> takes less than a minute (see [Install in Chrome](#install-in-chrome-locally)).
 
 ## Install in Chrome (locally)
 
