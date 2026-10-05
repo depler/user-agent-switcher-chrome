@@ -51,7 +51,20 @@ jobs:
           python -m pip install --upgrade pip SPARQLWrapper
 
       - name: Update User-Agent list
-        run: python scripts/user-agent-update.py
+        env:
+          WIKIDATA_API_TOKEN: ${{ secrets.WIKIDATA_API_TOKEN }}
+        run: |
+          if [ -n "$WIKIDATA_API_TOKEN" ]; then
+            # `user-agent-update.py` reads `wikidata-api-secret.txt` as
+            # (client name, client secret, access token); only the access token
+            # matters. The file is gitignored and removed again on exit.
+            trap 'rm -f wikidata-api-secret.txt' EXIT
+            printf 'user-agent-switcher\n-\n%s\n' "$WIKIDATA_API_TOKEN" > wikidata-api-secret.txt
+            echo "Using authenticated Wikidata access (WIKIDATA_API_TOKEN is set)"
+          else
+            echo "No WIKIDATA_API_TOKEN secret set; querying Wikidata anonymously"
+          fi
+          python scripts/user-agent-update.py
 
       - name: Detect changes
         id: changes

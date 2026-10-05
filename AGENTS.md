@@ -400,6 +400,11 @@ upstream author does — `scripts/user-agent-update.py` against Wikidata — and
 4. pushes to `main` and creates a GitHub Release `v<version>` with only the
    built `dist/user-agent-switcher-chrome-<version>.zip` attached (no notes).
 
+The Wikidata queries run anonymously unless the repository secret
+`WIKIDATA_API_TOKEN` is set. When present, the workflow writes a temporary
+`wikidata-api-secret.txt` (removed on exit; gitignored and excluded from the
+build) so the updater authenticates and gets a higher rate limit.
+
 There is **no `push` trigger**, and the job additionally skips commits carrying
 the `[uasw-release]` marker, so the version-bump commit cannot start another
 build. Failed builds are not retried. The version bump is what makes existing
