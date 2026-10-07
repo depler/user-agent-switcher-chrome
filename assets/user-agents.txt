@@ -6,13 +6,13 @@ Linux / Firefox 157 [Desktop]: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/2
 Mac OS X / Safari 26 [Desktop]: Mozilla/5.0 (Macintosh; Intel Mac OS X 26_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Safari/605.1.15
 Windows / IE 11 [Desktop]: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
 Windows / Edge 145 [Desktop]: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.3800.65
-Windows / Chrome 154 [Desktop]: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.8037.98 Safari/537.36
+Windows / Chrome 155 [Desktop]: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.40 Safari/537.36
 Windows / Firefox 153 ESR [Desktop]: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0
 
 Android Phone / Firefox 157 [Mobile]: Mozilla/5.0 (Android 17; Mobile; rv:157.0) Gecko/157.0 Firefox/157.0
-Android Phone / Chrome 154 [Mobile]: Mozilla/5.0 (Linux; Android 17; Z832 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.8037.98 Mobile Safari/537.36
+Android Phone / Chrome 155 [Mobile]: Mozilla/5.0 (Linux; Android 17; Z832 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.40 Mobile Safari/537.36
 Android Tablet / Firefox 157 [Mobile]: Mozilla/5.0 (Android 17; Tablet; rv:157.0) Gecko/157.0 Firefox/157.0
-Android Tablet / Chrome 154 [Mobile]: Mozilla/5.0 (Linux; Android 17; SAMSUNG-SM-T377A Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.8037.98 Mobile Safari/537.36
+Android Tablet / Chrome 155 [Mobile]: Mozilla/5.0 (Linux; Android 17; SAMSUNG-SM-T377A Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.40 Mobile Safari/537.36
 iPhone / Safari 26 [Mobile]: Mozilla/5.0 (iPhone; CPU OS 27_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/14E304 Safari/605.1.15
 iPad / Safari 26 [Mobile]: Mozilla/5.0 (iPad; CPU OS 27_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/605.1.15
 
